@@ -1,37 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header>
+        <div class="container">
+            <div class="player">
+                <span class="player-button"><i class="icon-prev"></i></span>
+                <span class="player-button"><i class="icon-play"></i></span>
+                <span class="player-button"><i class="icon-next"></i></span>
+            </div>
+            <div class="logo">
+                <img src="f.jpg" alt="Last.fm">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Live</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Charts</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Features</a></li>
+                </ul>
+            </nav>
+            <div class="search-form">
+                <form id="search-form" action="search.html" method="GET">
+                <input type="search" id="search-input" name="q" placeholder="Search">
+                <button type="submit"><i class="icon-search"></i></button>
+            </form>
+            </div>
+        </div>
+    </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <main>
+        <div class="container">
+            <section class="hot-right-now">
+                <h2>Hot right now</h2>
+                <div class="artists-grid">
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Kanye West</h3>
+                        <p>hip-hop · hip-hop · hip-hop</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>J-Hope</h3>
+                        <p>k-pop · hip-hop · korean</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>The Weeknd</h3>
+                        <p>rnb · electronic · canadian</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Tyler, the Creator</h3>
+                        <p>hip-hop · rap · ofwgkta</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Drake</h3>
+                        <p>hip-hop · rap · rnb</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Steve Lacy</h3>
+                        <p>free jazz · jazz · saxophone</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Playboi Carti</h3>
+                        <p>trap · hip-hop · cloud rap</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Kendrick Lamar</h3>
+                        <p>hip-hop · rap · hip-hop</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Joji</h3>
+                        <p>lo-fi · r&b · memphis rap</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Lana Del Rey</h3>
+                        <p>indie pop · female vocalists</p>
+                    </div>
+                    <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Mitski</h3>
+                        <p>indie rock · indie indie pop</p>
+                    </div>
+                     <div class="artist-card">
+                        <img src="f.jpg" alt="Artist Name">
+                        <h3>Frank Ocean</h3>
+                        <p>r&b · soul · hip-hop</p>
+                    </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                </div>
+            </section>
+
+            <section class="popular-tracks">
+                <h2>Popular tracks</h2>
+                <div class="track-list">
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>SEXY NUKIM (feat. RM of BTS)</h3>
+                            <p>Balming Tiger</p>
+                            <p>k-pop · hip-hop · informative</p>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>AFTER LIKE</h3>
+                            <p>IVE</p>
+                            <p>k-pop · disco · softy</p>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Romantic Homicide</h3>
+                            <p>d4vd</p>
+                            <p>lo-fi</p>
+                        </div>
+                    </div>
+                     <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Hype</h3>
+                            <p>Yeat</p>
+                            <p>hype</p>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Talk That Talk</h3>
+                            <p>TWICE</p>
+                            <p>k-pop · korean · kpop</p>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Super Freaky Girl</h3>
+                            <p>Nicki Minaj</p>
+                            <p>hip-hop · hip-hop · hip-hop</p>
+                        </div>
+                    </div>
+
+                      <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Yet To Come</h3>
+                            <p>BTS</p>
+                            <p>k-pop · korean · k-pop</p>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Hype Boy</h3>
+                            <p>NewJeans</p>
+                            <p>k-pop · kpop · softy</p>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>With You</h3>
+                            <p>Jimin</p>
+                            <p>jimin · ost · bts</p>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Bad Decisions (with BTS & Snoop Dogg)</h3>
+                            <p>Benny Blanco</p>
+                            <p>pop · dance · dance pop</p>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Bad Habit</h3>
+                            <p>Steve Lacy</p>
+                            <p>indie pop · bedroom pop</p>
+                        </div>
+                    </div>
+                      <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>That That (prod. & feat. SUGA of BTS)</h3>
+                            <p>PSY</p>
+                            <p>k-pop · armie suga · feat suga</p>
+                        </div>
+                    </div>
+
+                     <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Left and Right (feat. Jung Kook of BTS)</h3>
+                            <p>Charlie Puth</p>
+                            <p>pop · jungkook · 2022</p>
+                        </div>
+                    </div>
+
+                      <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Talk</h3>
+                            <p>Yeat</p>
+                            <p>trap · frenzyy · rap</p>
+                        </div>
+                    </div>
+
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Glimpse of Us</h3>
+                            <p>Joji</p>
+                            <p>ballad · pop · piano</p>
+                        </div>
+                    </div>
+
+                     <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Pink Venom</h3>
+                            <p>BLACKPINK</p>
+                            <p>k-pop · hip-hop</p>
+                        </div>
+                    </div>
+
+                     <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>Stay Alive (Prod. SUGA of BTS)</h3>
+                            <p>Jung Kook</p>
+                            <p>jungkook · bts · ost</p>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <img src="f.jpg" alt="Track Name">
+                        <div class="track-info">
+                            <h3>YOURS</h3>
+                            <p>Jimin</p>
+                            <p>ost · ballad · kpop</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <section class="company">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Last.fm</a></li>
+                        <li><a href="#">Contact Us</a></li>                        
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </section>
+
+                <section class="help">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Track My Music</a></li>
+                        <li><a href="#">Community Support</a></li>                        
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </section>
+
+                <section class="goodies">
+                    <h3>Goodies</h3>
+                    <ul>
+                        <li><a href="#">Download Scrobbler</a></li>                        
+                        <li><a href="#">Developer API</a></li>
+                        <li><a href="#">Free Music Downloads</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                    </ul>
+                </section>
+
+                <section class="account">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Last.fm Pro</a></li>                        
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </section>
+
+                <section class="follow">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>                        
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer-bottom">
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
