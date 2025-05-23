@@ -1,0 +1,120 @@
+.search-results {
+    padding: 30px 0;
+}
+
+.search-results h2 {
+    margin-bottom: 20px;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.tabs li {
+    margin-right: 15px;
+}
+
+.tabs a {
+    color: #555;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tabs a:hover {
+    background-color: #ddd;
+    color: #333;
+    text-decoration: none;
+}
+
+.artists,
+.albums,
+.tracks {
+    margin-bottom: 30px;
+}
+
+.artists h3,
+.albums h3,
+.tracks h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.artist-item img {
+    max-width: 150px; /* Пример */
+    height: auto;
+    display: block; /* Важно! */
+}
+.artist-list,
+.album-list,
+.track-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.artist-item,
+.album-item,
+.track-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.artist-item:hover,
+.album-item:hover,
+.track-item:hover {
+    transform: translateY(-3px);
+}
+
+.artist-item img,
+.album-item img,
+.track-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.artist-item .artist-info h4,
+.album-item .album-info h4,
+.track-item .track-info h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.artist-item .artist-info p,
+.album-item .album-info p,
+.track-item .track-info p {
+    font-size: 0.8rem;
+    color: #777;
+    margin: 3px 0;
+}
+
+.albums a,
+.tracks a {
+    display: block;
+    margin-top: 15px;
+    text-align: right;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.albums a:hover,
+.tracks a:hover {
+    text-decoration: underline;
+}
