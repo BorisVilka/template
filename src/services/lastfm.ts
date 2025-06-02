@@ -2,7 +2,7 @@ import { Album} from '../types/Album';
 import { Artist} from '../types/Artist';
 import { Track } from '../types/Track';
 
-const API_KEY = "2467e45594a2085cd6fbcdb081b93c5f";
+const API_KEY = "6a5b3d70be61e5cff61d77a028246ac3";
 
 const createApiUrl = (method: string, params: Record<string, string>) => {
   const urlParams = new URLSearchParams({
@@ -11,11 +11,11 @@ const createApiUrl = (method: string, params: Record<string, string>) => {
     method: method,
     ...params,
   });
-  return `http://ws.audioscrobbler.com/2.0/?${urlParams.toString()}`;
+  return `https://ws.audioscrobbler.com/2.0/?${urlParams.toString()}`;
 };
 
 export const searchArtists = async (searchTerm: string): Promise<Artist[]> => {
-  const url = `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${encodeURIComponent(searchTerm)}&api_key=${API_KEY}&format=json`;
+  const url = `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${encodeURIComponent(searchTerm)}&api_key=${API_KEY}&format=json`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -38,7 +38,7 @@ export const searchArtists = async (searchTerm: string): Promise<Artist[]> => {
 };
 
 export const searchAlbums = async (searchTerm: string): Promise<Album[]> => {
-  const url = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${encodeURIComponent(searchTerm)}&api_key=${API_KEY}&format=json`;
+  const url = `https://ws.audioscrobbler.com/2.0/?method=album.search&album=${encodeURIComponent(searchTerm)}&api_key=${API_KEY}&format=json`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -61,7 +61,7 @@ export const searchAlbums = async (searchTerm: string): Promise<Album[]> => {
 };
 
 export const searchTracks = async (searchTerm: string): Promise<Track[]> => {
-  const url = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${encodeURIComponent(searchTerm)}&api_key=${API_KEY}&format=json`;
+  const url = `https://ws.audioscrobbler.com/2.0/?method=track.search&track=${encodeURIComponent(searchTerm)}&api_key=${API_KEY}&format=json`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -84,7 +84,7 @@ export const searchTracks = async (searchTerm: string): Promise<Track[]> => {
 };
 
 export const getTopTracks = async (): Promise<Track[]> => {
-  const url = `http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${API_KEY}&format=json`;
+  const url = `https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${API_KEY}&format=json`;
 
   try {
     const response = await fetch(url);
@@ -109,7 +109,7 @@ export const getTopTracks = async (): Promise<Track[]> => {
 };
 
 export const getTopArtists = async (): Promise<Artist[]> => {
-  const url = `http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${API_KEY}&format=json`;
+  const url = `https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${API_KEY}&format=json`;
 
   try {
     const response = await fetch(url);

@@ -1,0 +1,74 @@
+/* modern.css: Extra modern tweaks for layout and utility */
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 18px 10px;
+    box-shadow: none;
+    min-height: unset;
+  }
+  .sidebar-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+  }
+  .sidebar-nav li {
+    margin: 0;
+  }
+  .sidebar-search {
+    width: 180px;
+    margin-top: 0;
+  }
+  .main-content {
+    padding: 24px 2vw;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f6f7fb;
+}
+::-webkit-scrollbar-thumb {
+  background: #eebbc3;
+  border-radius: 6px;
+}
+
+.card-section {
+  transition: box-shadow 0.2s;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 0;
+  }
+  .sidebar-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .main-content {
+    padding: 10px 2vw;
+    gap: 18px;
+  }
+  .card-section {
+    padding: 12px 6px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 8px;
+  }
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 16px; }
+.mt-4 { margin-top: 32px; } 

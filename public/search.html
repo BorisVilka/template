@@ -3,133 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="search.css">
+    <title>Результаты поиска</title>
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="modern.css">
+    <link rel="stylesheet" href="search.css">
 </head>
 <body>
-<!-- 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="f.jpg" alt="Last.fm">
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <img src="f.jpg" alt="Last.fm" class="sidebar-logo">
+                <span class="brand">Last.fm</span>
             </div>
-            <nav>
+            <form id="search-form" class="sidebar-search" action="search.html" method="GET">
+                <input type="search" id="search-input" name="q" placeholder="Поиск...">
+                <button type="submit">🔍</button>
+            </form>
+            <nav class="sidebar-nav new-sidebar-nav">
                 <ul>
-                    <li><a href="http://localhost:3000/callback">Home</a></li>
-                    <li><a href="#">Live</a></li>
-                    <li><a href="#">Music</a></li>                    
-                    <li><a href="#">Charts</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Features</a></li>
+                    <li><a href="http://localhost:3000/callback"><span class="nav-icon">🏠</span><span class="nav-label">Главная</span></a></li>
+                    <li><a href="#"><span class="nav-icon">🎤</span><span class="nav-label">Live</span></a></li>
+                    <li><a href="#"><span class="nav-icon">🎵</span><span class="nav-label">Музыка</span></a></li>
+                    <li><a href="#"><span class="nav-icon">📈</span><span class="nav-label">Чарты</span></a></li>
+                    <li><a href="#"><span class="nav-icon">🎫</span><span class="nav-label">События</span></a></li>
+                    <li><a href="#"><span class="nav-icon">✨</span><span class="nav-label">Фичи</span></a></li>
                 </ul>
             </nav>
-            <div class="search-form">
-            <form id="search-form" action="search.html" method="GET">
-                <input type="search" id="search-input" name="q" placeholder="Search">
-                <button type="submit"><i class="icon-search"></i></button>
-            </form>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <section class="search-results">
-                <h2>Search Results for "Never gonna give you up"</h2>
-
-                <div class="tabs">
-                    <ul>
-                        <li><a href="#">Top Results</a></li>                        
-                        <li><a href="#">Artists</a></li>
-                        <li><a href="#">Albums</a></li>
-                        <li><a href="#">Tracks</a></li>
-                    </ul>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-profile">
+                <div class="profile-avatar">👤</div>
+                <div class="profile-info">
+                    <div class="profile-name">Профиль</div>
+                    <a href="#" class="profile-link">Настройки</a>
                 </div>
-
-                <section class="artists">
-                    <h3>Artists</h3>
-                    <div class="artist-list">
-
+            </div>
+        </aside>
+        <main class="main-content">
+            <section class="card-section">
+                <section class="search-results">
+                    <h2>Результаты поиска для "<span id="search-query"></span>"</h2>
+                    <div class="tabs">
+                        <ul>
+                            <li><a href="#" class="tab-active">Топ</a></li>
+                            <li><a href="#">Артисты</a></li>
+                            <li><a href="#">Альбомы</a></li>
+                            <li><a href="#">Треки</a></li>
+                        </ul>
                     </div>
-                </section>
-
-                <section class="albums">
-                    <h3>Albums</h3>
-                    <div class="album-list">
-
-                    </div>
-                    <a href="#">More albums ></a>
-                </section>
-
-                <section class="tracks">
-                    <h3>Tracks</h3>
-                    <div class="track-list">
-
-                    </div>
-                    <a href="#">More tracks ></a>
+                    <section class="artists">
+                        <h3>Артисты</h3>
+                        <div class="artist-list"></div>
+                    </section>
+                    <section class="albums">
+                        <h3>Альбомы</h3>
+                        <div class="album-list"></div>
+                        <a href="#">Больше альбомов &gt;</a>
+                    </section>
+                    <section class="tracks">
+                        <h3>Треки</h3>
+                        <div class="track-list"></div>
+                        <a href="#">Больше треков &gt;</a>
+                    </section>
                 </section>
             </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <section class="company">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About Last.fm</a></li>
-                        <li><a href="#">Contact Us</a></li>                        
-                        <li><a href="#">Jobs</a></li>
-                    </ul>
-                </section>
-
-                <section class="help">
-                    <h3>Help</h3>
-                    <ul>
-                        <li><a href="#">Track My Music</a></li>
-                        <li><a href="#">Community Support</a></li>                        
-                        <li><a href="#">Community Guidelines</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </section>
-
-                <section class="goodies">
-                    <h3>Goodies</h3>
-                    <ul>
-                        <li><a href="#">Download Scrobbler</a></li>                        
-                        <li><a href="#">Developer API</a></li>
-                        <li><a href="#">Free Music Downloads</a></li>
-                        <li><a href="#">Merchandise</a></li>
-                    </ul>
-                </section>
-
-                <section class="account">
-                    <h3>Account</h3>
-                    <ul>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">Last.fm Pro</a></li>                        
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </section>
-
-                <section class="follow">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>                        
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>                        
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
-                </section>
+        </main>
+    </div>
+    <footer class="modern-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="#">О Last.fm</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-col">
+                <h4>Помощь</h4>
+                <ul>
+                    <li><a href="#">Трекинг музыки</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">Правила</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Goodies</h4>
+                <ul>
+                    <li><a href="#">Скробблер</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Бесплатная музыка</a></li>
+                    <li><a href="#">Мерч</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Аккаунт</h4>
+                <ul>
+                    <li><a href="#">Настройки</a></li>
+                    <li><a href="#">Last.fm Pro</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Мы в соцсетях</h4>
+                <div class="footer-socials">
+                    <a href="#">VK</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                </div>
             </div>
         </div>
+        <div class="footer-bottom">&copy; 2024 Last.fm. Все права защищены.</div>
     </footer>
-<script src="searchs.js"></script> -->
+    <script src="search.js"></script>
+    <script>
+      // Автоматически подставлять поисковый запрос в заголовок
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('q');
+      if (q) document.getElementById('search-query').textContent = q;
+    </script>
 </body>
 </html>
