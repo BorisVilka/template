@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music</title>
+    <title>Результаты поиска</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="modern.css">
+    <link rel="stylesheet" href="search.css">
 </head>
 <body>
     <div class="layout">
@@ -39,13 +40,32 @@
             </div>
         </aside>
         <main class="main-content">
-            <section class="hot-right-now card-section">
-                <h2>Популярные артисты</h2>
-                <div class="artists-grid"></div>
-            </section>
-            <section class="popular-tracks card-section">
-                <h2>Популярные треки</h2>
-                <div class="track-list"></div>
+            <section class="card-section">
+                <section class="search-results">
+                    <h2>Результаты поиска для "<span id="search-query"></span>"</h2>
+                    <div class="tabs">
+                        <ul>
+                            <li><a href="#" class="tab-active">Топ</a></li>
+                            <li><a href="#">Артисты</a></li>
+                            <li><a href="#">Альбомы</a></li>
+                            <li><a href="#">Треки</a></li>
+                        </ul>
+                    </div>
+                    <section class="artists">
+                        <h3>Артисты</h3>
+                        <div class="artist-list"></div>
+                    </section>
+                    <section class="albums">
+                        <h3>Альбомы</h3>
+                        <div class="album-list"></div>
+                        <a href="#">Больше альбомов &gt;</a>
+                    </section>
+                    <section class="tracks">
+                        <h3>Треки</h3>
+                        <div class="track-list"></div>
+                        <a href="#">Больше треков &gt;</a>
+                    </section>
+                </section>
             </section>
         </main>
     </div>
@@ -97,6 +117,12 @@
         </div>
         <div class="footer-bottom">&copy; 2024 Last.fm. Все права защищены.</div>
     </footer>
-    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script>
+      // Автоматически подставлять поисковый запрос в заголовок
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('q');
+      if (q) document.getElementById('search-query').textContent = q;
+    </script>
 </body>
 </html>
